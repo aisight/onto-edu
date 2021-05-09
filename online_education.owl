@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#"
+     xml:base="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:education-ontology="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology">
+        <rdfs:comment>objects, organizations and actions of online education.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#url -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#url"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Instructor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Instructor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#belong_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assessment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assessment">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assign -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assign">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#instructor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#belong_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#belong_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#enroll -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#enroll">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#hosted_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#hosted_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#relation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#belong_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#learn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#learn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lesson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lesson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lesson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#post -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#post">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#publish -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#publish">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lesson"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#instructor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#relation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#relation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#review -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#review">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#submit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#submit">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assessment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#subscribe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#subscribe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#post"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#answer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#answer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assignment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assignment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#comment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#company">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#compiler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#compiler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+        <rdfs:comment>Specific services to compile code or analyse submissions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#coordinator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#coordinator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+        <rdfs:comment>Platforms to support coordination and collaboration, such as co-edit document, map and grouping.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#forum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#forum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#instructor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#instructor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+        <rdfs:comment>just teach course.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lession -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lession">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#mentor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#mentor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+        <rdfs:comment>consist of teacher or experienced students, which provide guidance to students.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#question">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#resources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+        <rdfs:comment>Host resources for online courses, such as document, streaming and forum.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#stream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#stream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+        <description>content on streaming media, such as video, graph and maps.</description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#participant"/>
+        <rdfs:comment>just learn course.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#submission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#submission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+        <rdfs:comment>submitted content to finish an assignment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#syllabus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#syllabus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#asset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#ugc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#university -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#university">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#institution"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assignment_Week_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assignment_Week_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assignment"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling"/>
+        <hosted_by rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assistments"/>
+        <description>Assignment 截止日期May 13, 2021 04:33 CST
+
+In this activity, you need to build a set of detectors predicting the variable ONTASK. The data set you will use in this assignment is very similar (but not identical) to the data set used in: 
+
+Godwin, K.E., Almeda, M.V., Petroccia, M., Baker, R.S., &amp; Fisher, A.V. (2013). Classroom activities and off-task behavior in elementary school children. Poster paper. Proceedings of the Annual Meeting of the Cognitive Science Society, 2428-2433.
+
+A description of many of the variables can be found in the above paper.
+
+
+You should complete this activity in either RapidMiner or Python. 
+
+Before attempting the assignment, you first need to select your tool-of-choice. Once you have selected, you are immediately presented with the first question of the assignment. If you want to change your tool choice after this, please reach out to Prof. Baker or Miggy. Please note, however, that all progress made on an assignment prior to changing one&apos;s tool choice will be lost.
+
+Final note: Please ignore the checkmarks and X&apos;s on the left panel of the assignment, as well as the performance bar on the bottom of each item as you&apos;re attempting the assignment. We are still working on removing these features from our ASSISTments tutors. If you complete the assignment, you will receive full credit.</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assistments -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assistments">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#compiler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#course"/>
+        <institution rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#PennX"/>
+        <institution rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Ryan_Baker"/>
+        <description>Online and software-based learning tools have been used increasingly in education. This movement has resulted in an explosion of data, which can now be used to improve educational effectiveness and support basic research on learning.</description>
+        <url>https://www.edx.org/course/big-data-and-education</url>
+        <rdfs:label>Self-paced</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#EDX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#EDX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#platform"/>
+        <description>online education platform.</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#IBM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#IBM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#company"/>
+        <description>International Business Machines Corporation</description>
+        <url>https://www.ibm.com/</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Intro_Video -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Intro_Video">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#stream"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling"/>
+        <description>introduction.</description>
+        <url>https://edx-video.net/PENBDEXX2017-V001100_DTH.mp4</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#PennX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#PennX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#university"/>
+        <url>https://www.edx.org/school/pennx</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Qualtrics -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Qualtrics">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#coordinator"/>
+        <description>Qualtrics XM // The Leading Experience Management Software</description>
+        <url>https://www.qualtrics.com</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Ryan_Baker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Ryan_Baker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#instructor"/>
+        <institution rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#PennX"/>
+        <publish rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Intro_Video"/>
+        <publish rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#The_State_of_Educational_Data_Mining_in_2009:_A_Review_and_Future_Visions"/>
+        <url>https://www.edx.org/bio/ryan-baker</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#solution_48fbc3fd28530dd280a96e33bd541b57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#solution_48fbc3fd28530dd280a96e33bd541b57">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#submission"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assignment:_2_-_Week_1_Assignment:_Classifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#the_first_survey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#the_first_survey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assignment"/>
+        <url>https://tccolumbia.qualtrics.com/jfe/form/SV_4YZSI2pgcXbQVNP?uid=f344b4bacb76cc20c03e96f80ff40964</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#the_syllabus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#the_syllabus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#syllabus"/>
+        <url>https://courses.edx.org/assets/courseware/v1/de7c8bc7d1083f71965155a614c03056/asset-v1:PennX+BDE1x+1T2021+type@asset+block/BDE-Syllabus1T2021.pdf</url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#threads_6042b027e13629049eb1426d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#threads_6042b027e13629049eb1426d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#question"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling"/>
+        <description>influence of Big education data on digital learning solutions design
+
+I wonder if there are enough studies on how big data in education can influence the way learning managment systems are engineered . The reports that r generated from learning systems, r they good enough? Can we generate more data that helps with understanding more behaviors/ and produce more insight ?</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#u_38756135 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#u_38756135">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#student"/>
+        <post rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#threads_6042b027e13629049eb1426d"/>
+        <description>alyusufi_b_gmail_com</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assignment:_2_-_Week_1_Assignment:_Classifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Assignment:_2_-_Week_1_Assignment:_Classifier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#assignment"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling"/>
+        <description>Problem ID:   PRABM7TF	
+Comment on this problem
+Question 1 of 10: Build a decision tree on the entire data set. What is the kappa? Please use 2 decimal places.
+
+ 
+
+You will need to use the following packages:
+
+tree from sklearn
+cohen_kappa_score from sklearn.metrics
+ 
+
+Use the following classifier and hyperparameters:
+
+tree.DecisionTreeClassifier(min_samples_split=10)
+ 
+
+
+Type your answer below as a number (example: 5, 3.1, 4 1/2, or 3/2):</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#The_State_of_Educational_Data_Mining_in_2009:_A_Review_and_Future_Visions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#The_State_of_Educational_Data_Mining_in_2009:_A_Review_and_Future_Visions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lecture"/>
+        <rdfs:label>article</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lession"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education"/>
+        <description>Regressors
+Classifiers</description>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_1:_Prediction_Modeling"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#belong_to"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education"/>
+        <rdfs:comment>a lesson of the course.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_2:_Model_Goodness_and_Validation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_2:_Model_Goodness_and_Validation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lession"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education"/>
+        <description>Detector Confidence
+Diagnostic Metrics
+* Cross-Validation and Over-Fitting</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_3:_Behavior_Detection_and_Feature_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Week_3:_Behavior_Detection_and_Feature_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#lession"/>
+        <belong_to rdf:resource="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#Big_Data_and_Education"/>
+        <description>Ground Truth for Behavior Detection
+Data Synchronization and Grain Size
+Feature Engineering
+Knowledge Engineering</description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#answer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#comment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shawn/ontologies/2021/education-ontology#question"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
